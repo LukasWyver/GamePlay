@@ -11,18 +11,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     // marginBottom: 64,   /* ajuste para tela de moto G */
   },
-  iconWrapper: {
-    width: 56,
-    height: 56,
-    justifyContent: "center",
-    alignItems: "center",
-    borderRightWidth: 1,
-    borderColor: theme.colors.line,
-  },
-  icon: {
-    width: 24,
-    height: 18,
-  },
   title: {
     flex: 1,
     color: theme.colors.heading,
