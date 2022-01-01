@@ -26,7 +26,7 @@ export function Header({ title, action }: Props) {
         <Feather name="arrow-left" color={heading} size={24} />
       </BorderlessButton>
       <Text style={styles.title}>{title}</Text>
-      {action && <View>{action}</View>}
+      {action ? <View>{action}</View> : <View style={{ width: 24 }} />}
     </LinearGradient>
   );
 }

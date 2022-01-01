@@ -10,7 +10,7 @@ import { Feather } from "@expo/vector-icons";
 import { styles } from "./styles";
 import { theme } from "../../global/styles/theme";
 
-import { GuildIcon } from "../GuildIcon/index.";
+import { GuildIcon } from "../GuildIcon";
 
 export type GuildProps = {
   id: string;
