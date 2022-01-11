@@ -1,16 +1,26 @@
-import React from 'react';
-import { Image } from 'react-native';
+import React from "react";
+import { Image, View } from "react-native";
 
-import { styles } from './styles';
+import { styles } from "./styles";
+import DiscordSvg from "../../assets/discord.svg";
 
-export function GuildIcon() { 
-    const uri = 'https://www.logolynx.com/images/logolynx/ef/efc8ae34e50a8920fbede4cffc2eacc6.png';
-    
-    return (
-        <Image 
-            source={{ uri }}
-            style={styles.image}
-            resizeMode="cover"
-        />
-    );
+const { CDN_IMAGE } = process.env;
+
+type Props = {
+  guildId: string;
+  iconId: string | null;
+};
+
+export function GuildIcon({ guildId, iconId }: Props) {
+  const uri = `${CDN_IMAGE}/icons/${guildId}/${iconId}.png`;
+
+  return (
+    <View style={styles.container}>
+      {iconId ? (
+        <Image source={{ uri }} style={styles.image} resizeMode="cover" />
+      ) : (
+        <DiscordSvg width={40} height={40} />
+      )}
+    </View>
+  );
 }
