@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, Alert } from "react-native";
+import { View, Text, Alert, TouchableOpacity } from "react-native";
 import { RectButton } from "react-native-gesture-handler";
 
 import { Avatar } from "../Avatar";
@@ -18,10 +18,6 @@ export function Profile() {
 
   function handleCloseModal() {
     setOpenModal(false);
-  }
-
-  function teste() {
-    alert("teste");
   }
   return (
     <View style={styles.container}>
@@ -48,15 +44,15 @@ export function Profile() {
           <Text style={styles.textExit}>?</Text>
         </View>
         <View style={styles.ContentButtonExit}>
-          <RectButton
+          <TouchableOpacity
             onPress={() => handleCloseModal()}
             style={styles.ButtonNot}
           >
             <Text style={styles.TextButtonNot}>Não</Text>
-          </RectButton>
-          <RectButton onPress={signOut} style={styles.ButtonYes}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={signOut} style={styles.ButtonYes}>
             <Text style={styles.TextButtonYes}>Sim</Text>
-          </RectButton>
+          </TouchableOpacity>
         </View>
       </ModalExit>
     </View>

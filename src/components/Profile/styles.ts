@@ -43,8 +43,7 @@ export const styles = StyleSheet.create({
   },
   ButtonNot: {
     borderWidth: 2,
-    borderColor: "#fff",
-    backgroundColor: theme.colors.secondary80,
+    borderColor: theme.colors.secondary30,
     borderRadius: 8,
     paddingHorizontal: 66,
     paddingVertical: 16,

@@ -97,7 +97,6 @@ function AuthProvider({ children }: AuthProviderProps) {
   async function signOut() {
     setUser({} as User);
     await AsyncStorage.removeItem(COLLECTION_USERS);
-    await AsyncStorage.removeItem(COLLECTION_APPOINTMENTS);
   }
 
   async function loadUserStorageData() {
